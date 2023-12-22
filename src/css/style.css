@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+html,
+body {
+  height: 100%;
+}
+
+.showcase {
+  width: 100%;
+  background-color: white;
+  max-width: 1500px;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero{
+    width: 100%;
+    max-width: 1500px; 
+    margin-bottom: 5%; 
+}
+
+  #hero h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #45505b;
+  }
+  
+  #hero p {
+    color: #45505b;
+    margin: 15px 0 0 0;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #hero p span {
+    color: #0563bb;
+    letter-spacing: 1px;
+  }
+  
+  #hero .social-links {
+    margin-top: 12px;
+  }
+  
+  #hero .social-links a {
+    font-size: 24px;
+    display: inline-block;
+    color: #45505b;
+    line-height: 1;
+    margin-right: 20px;
+    transition: 0.3s;
+  }
+  
+  
+  
+  /*--------------------------------------------------------------
+  # Sections General
+  --------------------------------------------------------------*/
+
+
+.games {
+  display: flex;
+  gap: 0.6rem;
+  aspect-ratio: 5 / 2;
+}
+
+.game {
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  flex: 1 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.game:hover {
+  flex: 20;
+}
+
+.game > h3 {
+  white-space: nowrap;
+  color: white;
+  margin: 1rem 0.8rem;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.game:hover > h3 {
+  opacity: 1;
+}
+
+.game > h3::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f11b";
+  display: inline-block;
+  border-radius: 50%;
+  border: 0.2rem solid #ffffffe6;
+  aspect-ratio: 1 / 1;
+  margin-right: 1rem;
+  padding: 0.35em 0.25em 0em 0.25em;
+  font-size: 1.1rem;
+  vertical-align: 0.1rem;
+}
+
+.game > h4 {
+  white-space: nowrap;
+  color: white;
+  margin: 47% -12%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+}
+
+.game:hover > h4 {
+  opacity: 1;
+}
+
+.game > h4::before {
+  display: inline-block;
+  border-radius: 50%;
+  border: 0.2rem solid #ffffffe6;
+  padding: 0.35em 0.25em 0em 0.25em;
+  font-size: 1rem;
+}
+
+.game > p {
+  color: rgb(255, 255, 255);
+  margin: 10% -29%;
+  font-size: 1.2rem;
+  opacity: 0;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  width:55%; 
+  text-align:inherit
+}
+
+.game:hover > p {
+  opacity: 1;
+ 
+}
+
+.game > p::before {
+  display: inline-block;
+  border-radius: 50%;
+  border: 0.2rem solid #ffffffe6;
+  padding: 0.35em 0.25em 0em 0.25em;
+  font-size: 0.1rem;
+  vertical-align: 0.1rem;
+}
+
+.game:nth-child(1) {
+  background-image: url(/src/pictures/Whois.png);
+}
+
+.game:nth-child(2) {
+  background-image: url(/src/pictures/MyPortfolio.png);
+}
+
+.game:nth-child(3) {
+  background-image: url(https://kodfun.github.io/Reels/FlexAccordion/3.jpg);
+}
+
+.game:nth-child(4) {
+  background-image: url(https://kodfun.github.io/Reels/FlexAccordion/4.jpg);
+}
+
+.game:nth-child(5) {
+  background-image: url(https://kodfun.github.io/Reels/FlexAccordion/5.jpg);
+}
+
+
+.visuallyhidden {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  opacity: 0;
+  
+}
+
+.gc-container {
+  width: 100%;
+  margin: 6% 1%;
+  opacity: 0;
+  width:100%; 
+  overflow: hidden;
+}
+
+.gc-container:hover{
+  opacity: 1;
+}
+
+.card-carousel {
+  --card-width: 80%;
+  --card-max-width: 500px;
+  --card-height: 480px;
+  --carousel-min-width: 600px;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter .3s ease;
+}
+
+@media screen and (max-width: 640px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+  }
+}
+
+.card-carousel.smooth-return {
+  transition: all .2s ease;
+}
+
+.card-carousel .card {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 1em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0,0,0,.5);
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  border-radius: 1em;
+  filter: brightness(.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.highlight {
+  filter: brightness(1)
+}
+
+
+.card:nth-of-type(1) .image-container {
+    background-image: url("https://static.addtoany.com/images/dracaena-cinnabari.jpg");
+}
+ 
+.card:nth-of-type(2) .image-container {
+  background-image: url("https://www.w3schools.com/w3css/img_lights.jpg")
+}
+
+.card:nth-of-type(3) .image-container {
+  background-image: url("https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+.card:nth-of-type(4) .image-container {
+  background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+.card:nth-of-type(5) .image-container {
+  background-image: url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg")
+}
+
+
+
+.image-container {
+  width: 8em;
+  height: 8em;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  padding: 1em;
+  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+  
+}
+
+.image-container::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 120%;
+  border: solid 3px rgba(0,0,0,.1);
+  border-radius: 100%;
+  position: absolute;
+  top: calc(-10% - 3px);
+  left: calc(-10% - 3px);
+}
+
+h2 {
+  padding: 1em;
+  margin-top: 1em;
+  background: rgba(0,0,0,.3);
+  text-align: center;
+  color: white;
+  border-radius: .2em;
+  display: inline-block;
+  transform: translateX(calc((100vw - 100%) / 2))
+}
+
+h2 a {
+  color: #f5b916
+}

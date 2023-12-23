@@ -366,3 +366,58 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
 //******** Type Writer Effect +++++++++++++//
+
+
+//******** Phone Number +++++++++++++//
+function formatPhoneNumber() {
+  // Telefon numarasını al
+  var phoneNumber = document.getElementById('phoneNumber').value;
+
+  // Sadece rakamları tut
+  var numericPhoneNumber = phoneNumber.replace(/\D/g, '');
+
+  // En fazla 10 rakam kullanılmasını sağla
+  if (numericPhoneNumber.length > 10) {
+      numericPhoneNumber = numericPhoneNumber.substring(0, 10);
+  }
+
+  // İlk 3 rakamı parantez içine al
+  var formattedNumber = '(' + numericPhoneNumber.substring(0, 3) + ')';
+
+  // Sonraki 3 rakamdan sonra bir boşluk bırak
+  formattedNumber += ' ' + numericPhoneNumber.substring(3, 6);
+
+  // Bir boşluk daha bırak
+  formattedNumber += ' ' + numericPhoneNumber.substring(6);
+
+  // Formate edilmiş numarayı güncelle
+  document.getElementById('phoneNumber').value = formattedNumber;
+}
+
+//******** Phone Number  +++++++++++++//
+
+
+
+//******** Whatsap  +++++++++++++//
+function submitForm() {
+  // Formdaki değerleri al
+  var firstName = document.getElementById('firstName').value;
+  var lastName = document.getElementById('lastName').value;
+  var phoneNumber = document.getElementById('phoneNumber').value;
+  var websiteName = document.getElementById('websiteName').value;
+  var message = document.getElementById('message').value;
+
+  // WhatsApp mesaj metnini oluştur
+  var whatsappMessage = "Ad: " + firstName + " " + lastName + "\n";
+  whatsappMessage += "Telefon: " + phoneNumber + "\n";
+  whatsappMessage += "Website Adı: " + websiteName + "\n";
+  whatsappMessage += "Mesaj: " + message;
+
+  // WhatsApp URL'sini oluştur
+  var whatsappUrl = "https://api.whatsapp.com/send?phone=+905367029629&text=" + encodeURIComponent(whatsappMessage);
+
+  // WhatsApp'ı yeni sekmede aç
+  window.open(whatsappUrl, "_blank");
+}
+//******** Whatsap  +++++++++++++//
+
